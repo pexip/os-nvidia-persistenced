@@ -1,3 +1,10 @@
+nvidia-persistenced (525.85.05-1+pexip24u2) pexip; urgency=medium
+
+  * Fix up user/group handling to match our 0660 root:video nvidia device
+    permissions.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Sun, 25 Feb 2024 11:40:07 +0000
+
 nvidia-persistenced (525.85.05-1+pexip24u1) pexip; urgency=medium
 
   * Fix Pexip versioning.

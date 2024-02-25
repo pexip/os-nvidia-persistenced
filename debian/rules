@@ -22,11 +22,14 @@ endif
 
 AUTOGEN	 = debian/nvidia-persistenced.init debian/nvidia-persistenced.service
 
-debian/nvidia-persistenced.init: init/sysv/nvidia-persistenced.template
-	sed s/__USER__/nvpd/ $< > $@
+# Pexip specific - we don't need init scripts
+#debian/nvidia-persistenced.init: init/sysv/nvidia-persistenced.template
+#	sed s/__USER__/nvpd/ $< > $@
 
-debian/nvidia-persistenced.service: init/systemd/nvidia-persistenced.service.template
-	sed s/__USER__/nvpd/ $< > $@
+# Pexip specific - we customise the service file, so include it
+# in debian/ by hand.  If upgrading, check for changes
+#debian/nvidia-persistenced.service: init/systemd/nvidia-persistenced.service.template
+#	sed s/__USER__/nvpd/ $< > $@
 
 
 %:
