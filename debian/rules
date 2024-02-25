@@ -20,7 +20,7 @@ export DEBUG		 = 1
 endif
 
 
-AUTOGEN	 = debian/nvidia-persistenced.init debian/nvidia-persistenced.service
+# AUTOGEN	 = debian/nvidia-persistenced.init debian/nvidia-persistenced.service
 
 # Pexip specific - we don't need init scripts
 #debian/nvidia-persistenced.init: init/sysv/nvidia-persistenced.template
