@@ -1,3 +1,29 @@
+nvidia-persistenced (535.171.04-1~deb12u1) bookworm; urgency=medium
+
+  * Rebuild for bookworm.
+
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 28 Mar 2024 17:03:44 +0100
+
+nvidia-persistenced (535.171.04-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 25 Mar 2024 10:51:19 +0100
+
+nvidia-persistenced (530.41.03-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Switch B-D from pkg-config to pkgconf.
+
+ -- Andreas Beckmann <anbe@debian.org>  Tue, 19 Mar 2024 17:59:21 +0100
+
+nvidia-persistenced (525.147.05-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update the list of supported drivers.
+
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 26 Jan 2024 23:34:41 +0100
+
 nvidia-persistenced (525.85.05-1) unstable; urgency=medium
 
   * New upstream release.
