@@ -1,3 +1,9 @@
+nvidia-persistenced (535.171.04-1~deb12u1.1+pexip24u1) pexip; urgency=medium
+
+  * Workaround version number mistake issue.
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Mon, 03 Feb 2025 10:33:40 +0000
+
 nvidia-persistenced (535.171.04-1~deb12u1+pexip24u1) pexip; urgency=medium
 
   * Fix version number.
