@@ -1,2 +1,3 @@
 initscript.patch
 repro.patch
+umask.patch
