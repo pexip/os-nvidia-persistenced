@@ -1,0 +1,27 @@
+Author: Andreas Beckmann <anbe@debian.org>
+Description: nvidia-smi consumes all RAM+SWAP
+ workaround: chmod o-w the nvidia-persistenced socket
+Bug: https://forums.developer.nvidia.com/t/nvidia-smi-uses-all-of-ram-and-swap/295639
+Bug-Debian: https://bugs.debian.org/1092449
+
+--- a/nvidia-persistenced.c
++++ b/nvidia-persistenced.c
+@@ -637,6 +637,7 @@ static NvPdStatus setup_devices(NvPersis
+ static NvPdStatus setup_rpc()
+ {
+     register SVCXPRT *transp;
++    int old_umask;
+ 
+     /*
+      * We should remove any stale sockets on the filesystem before attempting
+@@ -652,7 +653,10 @@ static NvPdStatus setup_rpc()
+     }
+ 
+     /* Create the RPC service over the Unix-domain socket */
++    old_umask = umask(0);
++    umask(old_umask | 0002);
+     transp = svcunix_create(socket_fd, 0, 0, NVPD_SOCKET_PATH);
++    umask(old_umask);
+     if (transp == NULL) {
+         syslog(LOG_ERR, "Failed to create RPC service");
+         return NVPD_ERR_RPC;

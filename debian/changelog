@@ -1,3 +1,26 @@
+nvidia-persistenced (535.230.02-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.7.1. No changes needed.
+
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 20 Feb 2025 22:58:52 +0100
+
+nvidia-persistenced (535.216.01-2) unstable; urgency=medium
+
+  * Create the socket with a umask of 0002 as a workaround for nvidia-smi
+    consuming all RAM+SWAP if the nvidia-persistenced socket is writable.
+    (Closes: #1092449)
+
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 10 Jan 2025 23:46:44 +0100
+
+nvidia-persistenced (535.216.01-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update the list of supported drivers.
+  * Bump Standards-Version to 4.7.0. No changes needed.
+
+ -- Andreas Beckmann <anbe@debian.org>  Wed, 13 Nov 2024 21:52:19 +0100
+
 nvidia-persistenced (535.171.04-1~deb12u1.1+pexip24u1) pexip; urgency=medium
 
   * Workaround version number mistake issue.
