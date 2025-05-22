@@ -9,7 +9,8 @@ Disclaimer:
  NVIDIA drivers in non-free.
 
 Files: *
-Copyright: Copyright (C) 2004-2023 NVIDIA Corporation
+Copyright:
+ Copyright (C) 2004-2024 NVIDIA Corporation
 License: Expat
 
 Files: debian/*

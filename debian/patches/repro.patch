@@ -3,7 +3,7 @@ Description: make the manpage build reproducible
 
 --- a/Makefile
 +++ b/Makefile
-@@ -172,7 +172,7 @@ $(OPTIONS_1_INC): $(GEN_MANPAGE_OPTS)
+@@ -175,7 +175,7 @@ $(OPTIONS_1_INC): $(GEN_MANPAGE_OPTS)
  $(MANPAGE_not_gzipped): nvidia-persistenced.1.m4 $(OPTIONS_1_INC) $(VERSION_MK)
  	$(call quiet_cmd,M4) -D__HEADER__=$(AUTO_TEXT) -I $(OUTPUTDIR) \
  	  -D__VERSION__=$(NVIDIA_VERSION) \
@@ -14,9 +14,9 @@ Description: make the manpage build reproducible
  
 --- a/utils.mk
 +++ b/utils.mk
-@@ -189,6 +189,14 @@ NV_GENERATED_HEADERS ?=
- PCIACCESS_CFLAGS      ?=
- PCIACCESS_LDFLAGS     ?=
+@@ -202,6 +202,14 @@ NV_QUIET_COMMAND_REMOVED_TARGET_PREFIX ?
+ 
+ NV_GENERATED_HEADERS ?=
  
 +# Ensure the build is reproducible, for details see:
 +# https://reproducible-builds.org/docs/source-date-epoch/
