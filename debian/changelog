@@ -1,3 +1,18 @@
+nvidia-persistenced (550.163.01-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 23 May 2025 01:40:16 +0200
+
+nvidia-persistenced (545.29.06-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Stop building for ppc64el.
+  * Bump Standards-Version to 4.7.2. No changes needed.
+
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 15 May 2025 19:10:42 +0200
+
 nvidia-persistenced (535.230.02-1+pexip25u2) pexip-trixie; urgency=medium
 
   * Trixie build for product distribution

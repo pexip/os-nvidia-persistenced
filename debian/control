@@ -11,20 +11,20 @@ Build-Depends:
  libtirpc-dev,
  m4,
 Rules-Requires-Root: no
-Standards-Version: 4.7.1
+Standards-Version: 4.7.2
 Homepage: https://github.com/NVIDIA/nvidia-persistenced
 Vcs-Browser: https://salsa.debian.org/nvidia-team/nvidia-persistenced
 Vcs-Git: https://salsa.debian.org/nvidia-team/nvidia-persistenced.git
 XS-Pexip-Upstream: http://deb.debian.org/debian/ trixie
 
 Package: nvidia-persistenced
-Architecture: amd64 arm64 ppc64el
+Architecture: amd64 arm64
 Multi-Arch: foreign
 Pre-Depends:
  ${misc:Pre-Depends}
 Depends:
  libnvidia-cfg1 [!i386 !armhf]
- | libnvidia-tesla-535-cfg1 [amd64 arm64 ppc64el]
+ | libnvidia-tesla-535-cfg1 [amd64 arm64]
  | libnvidia-cfg.so.1
  | libnvidia-cfg1-any,
  adduser,
